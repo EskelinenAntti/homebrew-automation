@@ -5,8 +5,8 @@ FORMULA=$1
 
 if [[ $# -ne 1 ]]
 then
-  echo "Usage $0 FORMULA"
-  exit 0
+	echo "Usage $0 FORMULA"
+	exit 0
 fi
 
 # New release and tag
