@@ -9,9 +9,6 @@ then
 	exit 0
 fi
 
-# New release and tag
-gh release create --fail-on-no-commits --generate-notes
-
 # Tarball url
 URL="$(gh repo view --json url | jq -r .url)/archive/refs/tags/$(gh release view --json tagName | jq -r .tagName).tar.gz"
 SHA256=$(curl -Ls "$URL" | shasum -a 256 | awk '{ print $1 }')
