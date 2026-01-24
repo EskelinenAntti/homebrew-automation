@@ -6,6 +6,7 @@ if [[ -z "$1" ]]; then
     echo "Usage $0 [tap]"
     exit 1
 fi
+
 TAP="$1"
 
 brew update
